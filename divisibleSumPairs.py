@@ -12,10 +12,11 @@ def divisibleSumPairs(n, k, ar):
                 n1 = ar[index]
                 n2 = ar[index + num]
                 if (n1 + n2) % k == 0:
-                    div_list.append((index + 1, index + num + 1))  
+                    div_list.append((index, index + num))  
             except:
                 print(div_list)
             dif-=1
             num+=1
+    return len(div_list)
 
-divisibleSumPairs(n, k, ar)
+print(divisibleSumPairs(n, k, ar))
